@@ -13,13 +13,15 @@ public class AkkaQuickstartTest {
     public static final TestKitJunitResource testKit = new TestKitJunitResource();
 //#definition
 
-    //#test
-    @Test
-    public void testGreeterActorSendingOfGreeting() {
-        TestProbe<Greeter.Greeted> testProbe = testKit.createTestProbe();
-        ActorRef<Greeter.Greet> underTest = testKit.spawn(Greeter.create(), "greeter");
-        underTest.tell(new Greeter.Greet("Charles", testProbe.getRef()));
-        testProbe.expectMessage(new Greeter.Greeted("Charles", underTest));
-    }
+//    //#test
+//    @Test
+//    public void testGreeterActorSendingOfGreeting() {
+//        TestProbe<Greeter.Greeted> testProbe = testKit.createTestProbe();
+//        ActorRef<Greeter.Greet> underTest = testKit.spawn(Greeter.create(), "greeter");
+//        underTest.tell(new Greeter.Greet("Charles", testProbe.getRef()));
+//        testProbe.expectMessage(new Greeter.Greeted("Charles", underTest));
+//
+//
+//    }
     //#test
 }
